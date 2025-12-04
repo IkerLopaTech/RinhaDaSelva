@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Compilar Rinha da Selva",
+            "command": "gcc",
+            "args": [
+                "main.c",
+                "sistema.c",
+                "-o",
+                "rinha_selva.exe" // No Linux/Mac use apenas "rinha_selva"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compilador gcc para múltiplos arquivos"
+        }
+    ]
+}

@@ -130,6 +130,16 @@ void carregarPersonagem(No** cabeca, char* nomeArquivo){
     printf(">>Membros da rinha carregados!\n");
 }
 
+void rolarIniciativas(No* cabeca) {
+    No* aux = cabeca;
+    while (aux != NULL) {
+        int valorDado = (rand() % aux->p.tipoDado) + 1;
+        aux->p.ultimaRolagem = valorDado;
+        aux->p.iniciativaTotal = aux->p.nivel + valorDado;
+        aux = aux->prox;
+    }
+}
+
 void imprimirCombate(No* cabeca){
     printf("\n%-15s | %-5s | %-5s | %s\n", "MEMBRO", "NIVEL", "ROLL", "TOTAL");
     printf("-------------------------------------------\n");
