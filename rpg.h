@@ -27,9 +27,11 @@ typedef struct No{
 void adicionarPersonagem(No** cabeca, char* nome, int nivel, int dado);
 void removerPersonagem(No** cabeca, char* nome);
 void carregarPersonagem(No** cabeca, char* nomeArquivo);
+void salvarProgresso(No* cabeca);
 
 void rolarIniciativas(No* cabeca);
 void imprimirCombate(No* cabeca);
+void liberarLista(No* cabeca);
 
 void bubbleSort(No* cabeca);
 void executarMergeSort(No** cabeca);
